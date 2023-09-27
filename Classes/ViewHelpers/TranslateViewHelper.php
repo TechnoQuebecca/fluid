@@ -105,7 +105,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  * Value of key ``someKey`` in the current website language.
  * The locallang file of extension "some_extension_name" will be used.
  */
-final class TranslateViewHelper extends AbstractViewHelper
+class TranslateViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

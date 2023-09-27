@@ -79,7 +79,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  *
  * Depending on current page, routing and page path configuration.
  */
-final class PageViewHelper extends AbstractTagBasedViewHelper
+class PageViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string

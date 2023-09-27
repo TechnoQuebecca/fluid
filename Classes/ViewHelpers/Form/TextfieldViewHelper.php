@@ -31,7 +31,7 @@ namespace TYPO3\CMS\Fluid\ViewHelpers\Form;
  *
  *    <input type="text" name="myTextBox" value="default value" />
  */
-final class TextfieldViewHelper extends AbstractFormFieldViewHelper
+class TextfieldViewHelper extends AbstractFormFieldViewHelper
 {
     /**
      * @var string

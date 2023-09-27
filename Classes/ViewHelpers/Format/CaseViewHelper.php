@@ -73,7 +73,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  *    SomeString
  */
-final class CaseViewHelper extends AbstractViewHelper
+class CaseViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

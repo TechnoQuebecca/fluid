@@ -71,7 +71,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  *
  * Text with p, span, div and script Tags inside, all other tags are removed.
  */
-final class StripTagsViewHelper extends AbstractViewHelper
+class StripTagsViewHelper extends AbstractViewHelper
 {
     use CompileWithContentArgumentAndRenderStatic;
 

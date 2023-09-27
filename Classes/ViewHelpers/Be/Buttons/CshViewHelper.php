@@ -56,7 +56,7 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
  *
  * @deprecated
  */
-final class CshViewHelper extends AbstractBackendViewHelper
+class CshViewHelper extends AbstractBackendViewHelper
 {
     /**
      * As this ViewHelper renders HTML, the output must not be escaped.

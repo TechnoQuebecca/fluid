@@ -75,7 +75,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * Depending on current page, routing and page path configuration.
  */
-final class PageViewHelper extends AbstractViewHelper
+class PageViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

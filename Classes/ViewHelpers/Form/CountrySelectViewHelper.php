@@ -79,7 +79,7 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
  * You can also use the "property" attribute if you have bound an object to the form.
  * See :ref:`<f:form> <typo3-fluid-form>` for more documentation.
  */
-final class CountrySelectViewHelper extends AbstractFormFieldViewHelper
+class CountrySelectViewHelper extends AbstractFormFieldViewHelper
 {
     /**
      * @var string

@@ -118,7 +118,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * .. _parseFunc: https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Functions/Parsefunc.html
  */
-final class HtmlViewHelper extends AbstractViewHelper
+class HtmlViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

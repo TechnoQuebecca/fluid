@@ -74,7 +74,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  *    #ring to be trimmed#
  */
-final class TrimViewHelper extends AbstractViewHelper
+class TrimViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

@@ -43,7 +43,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder;
  * Some available attributes are defaults but do not make sense for this ViewHelper. Relevant attributes specific
  * for this ViewHelper are: async, crossorigin, defer, integrity, nomodule, nonce, referrerpolicy, src, type.
  */
-final class ScriptViewHelper extends AbstractTagBasedViewHelper
+class ScriptViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * This VH does not produce direct output, thus does not need to be wrapped in an escaping node

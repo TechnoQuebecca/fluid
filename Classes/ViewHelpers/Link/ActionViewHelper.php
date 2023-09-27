@@ -46,7 +46,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  *
  * Depending on the current page and your TypoScript configuration.
  */
-final class ActionViewHelper extends AbstractTagBasedViewHelper
+class ActionViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string

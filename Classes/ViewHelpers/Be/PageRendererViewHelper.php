@@ -48,7 +48,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  * This will load the specified css, js files and requireJs modules, adds a custom js
  * inline setting, and adds a resolved label to be used in js.
  */
-final class PageRendererViewHelper extends AbstractViewHelper
+class PageRendererViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

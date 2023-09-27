@@ -41,7 +41,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  *      </f:be.menus.actionMenuItemGroup>
  *  </f:be.menus.actionMenu>
  */
-final class ActionMenuItemGroupViewHelper extends AbstractTagBasedViewHelper
+class ActionMenuItemGroupViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string

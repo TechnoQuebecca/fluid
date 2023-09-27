@@ -55,7 +55,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  *    {richTextFieldContent -> f:sanitize.html(build: 'default')}
  */
-final class HtmlViewHelper extends AbstractViewHelper
+class HtmlViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
