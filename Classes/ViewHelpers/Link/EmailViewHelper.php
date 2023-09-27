@@ -72,7 +72,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  *
  * Depending on `spamProtectEmailAddresses`_ setting.
  */
-final class EmailViewHelper extends AbstractTagBasedViewHelper
+class EmailViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string

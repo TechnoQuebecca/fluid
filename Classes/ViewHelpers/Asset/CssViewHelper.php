@@ -44,7 +44,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\TagBuilder;
  * for this ViewHelper are: as, crossorigin, disabled, href, hreflang, importance, integrity, media, referrerpolicy,
  * sizes, type, nonce.
  */
-final class CssViewHelper extends AbstractTagBasedViewHelper
+class CssViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * This VH does not produce direct output, thus does not need to be wrapped in an escaping node

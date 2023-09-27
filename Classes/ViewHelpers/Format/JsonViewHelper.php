@@ -56,7 +56,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  *
  * ``{"0":"bar","1":"baz"}``
  */
-final class JsonViewHelper extends AbstractViewHelper
+class JsonViewHelper extends AbstractViewHelper
 {
     use CompileWithContentArgumentAndRenderStatic;
 

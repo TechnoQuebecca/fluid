@@ -43,7 +43,7 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
  *
  * @todo: Candidate to deprecate? The page info is typically displayed in doc header, done by ModuleTemplate in controllers.
  */
-final class PageInfoViewHelper extends AbstractBackendViewHelper
+class PageInfoViewHelper extends AbstractBackendViewHelper
 {
     /**
      * This ViewHelper renders HTML, thus output must not be escaped

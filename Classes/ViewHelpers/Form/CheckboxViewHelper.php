@@ -60,7 +60,7 @@ namespace TYPO3\CMS\Fluid\ViewHelpers\Form;
  *
  * Depending on property ``interests``.
  */
-final class CheckboxViewHelper extends AbstractFormFieldViewHelper
+class CheckboxViewHelper extends AbstractFormFieldViewHelper
 {
     /**
      * @var string

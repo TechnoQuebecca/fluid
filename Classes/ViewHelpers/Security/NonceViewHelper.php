@@ -34,7 +34,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  *    <script nonce="{f:security.nonce()}">const inline = 'script';</script>
  */
-final class NonceViewHelper extends AbstractViewHelper
+class NonceViewHelper extends AbstractViewHelper
 {
     public function __construct(private readonly RequestId $requestId)
     {

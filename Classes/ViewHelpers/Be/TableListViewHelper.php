@@ -66,7 +66,7 @@ use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
  * List of "Website user" records with a text property of ``foo`` stored on PID ``1`` and two levels down.
  * Clicking on a username will open the TYPO3 info popup for the respective record
  */
-final class TableListViewHelper extends AbstractBackendViewHelper
+class TableListViewHelper extends AbstractBackendViewHelper
 {
     /**
      * As this ViewHelper renders HTML, the output must not be escaped.

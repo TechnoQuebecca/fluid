@@ -77,7 +77,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  *     123,-
  */
-final class CurrencyViewHelper extends AbstractViewHelper
+class CurrencyViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

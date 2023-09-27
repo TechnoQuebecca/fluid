@@ -71,7 +71,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * Magically adds 'Resources/Public' to path.
  */
-final class ResourceViewHelper extends AbstractViewHelper
+class ResourceViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

@@ -61,7 +61,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  *
  *    <f:be.infobox title="Message title" message="your box content" state="-2" iconName="check" disableIcon="true" />
  */
-final class InfoboxViewHelper extends AbstractViewHelper
+class InfoboxViewHelper extends AbstractViewHelper
 {
     use CompileWithContentArgumentAndRenderStatic;
 

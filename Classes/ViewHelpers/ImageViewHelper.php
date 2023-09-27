@@ -90,7 +90,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
  *
  * ``Could not get image resource for "NonExistingImage.png".``
  */
-final class ImageViewHelper extends AbstractTagBasedViewHelper
+class ImageViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string

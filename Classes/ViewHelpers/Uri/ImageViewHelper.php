@@ -84,7 +84,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * ``Could not get image resource for "NonExistingImage.png".``
  */
-final class ImageViewHelper extends AbstractViewHelper
+class ImageViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

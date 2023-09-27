@@ -88,7 +88,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  * TypoScript. If only a single value is passed or the ``currentValueKey`` is specified, :typoscript:`.current = 1`
  * can be used in the TypoScript.
  */
-final class CObjectViewHelper extends AbstractViewHelper
+class CObjectViewHelper extends AbstractViewHelper
 {
     use CompileWithContentArgumentAndRenderStatic;
 

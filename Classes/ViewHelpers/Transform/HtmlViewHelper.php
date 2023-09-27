@@ -49,7 +49,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  *    {content -> f:transform.html(selector:'a.href', onFailure:'removeEnclosure')}
  */
-final class HtmlViewHelper extends AbstractViewHelper
+class HtmlViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
