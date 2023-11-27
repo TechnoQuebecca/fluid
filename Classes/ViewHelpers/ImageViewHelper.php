@@ -27,6 +27,11 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
 /**
  * Resizes a given image (if required) and renders the respective img tag.
  *
+ * Note that image operations (cropping, scaling, converting) on
+ * non-FAL files (i.e. extension resources) may be changed in future TYPO3
+ * versions, since those operations are coupled with FAL metadata. Each
+ * non-FAL image operation creates a "fake" FAL record, which may lead to problems.
+ *
  * External URLs are not processed. Only a given width and height will be set on the tag.
  *
  * Examples
@@ -208,9 +213,6 @@ class ImageViewHelper extends AbstractTagBasedViewHelper
         } catch (\UnexpectedValueException $e) {
             // thrown if a file has been replaced with a folder
             throw new Exception($e->getMessage(), 1509741912, $e);
-        } catch (\RuntimeException $e) {
-            // RuntimeException thrown if a file is outside of a storage
-            throw new Exception($e->getMessage(), 1509741913, $e);
         } catch (\InvalidArgumentException $e) {
             // thrown if file storage does not exist
             throw new Exception($e->getMessage(), 1509741914, $e);

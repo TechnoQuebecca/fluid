@@ -36,9 +36,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  */
 class NonceViewHelper extends AbstractViewHelper
 {
-    public function __construct(private readonly RequestId $requestId)
-    {
-    }
+    public function __construct(private readonly RequestId $requestId) {}
 
     public function initializeArguments(): void
     {
@@ -47,6 +45,6 @@ class NonceViewHelper extends AbstractViewHelper
 
     public function render(): string
     {
-        return $this->requestId->nonce->b64;
+        return $this->requestId->nonce->consume();
     }
 }

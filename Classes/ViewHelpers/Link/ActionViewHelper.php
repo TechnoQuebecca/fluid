@@ -104,7 +104,7 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
         $pageType = (int)($this->arguments['pageType'] ?? 0);
         $noCache = (bool)($this->arguments['noCache'] ?? false);
         /** @var string|null $language */
-        $language = $this->arguments['language'] ?? null;
+        $language = isset($this->arguments['language']) ? (string)$this->arguments['language'] : null;
         /** @var string|null $section */
         $section = $this->arguments['section'] ?? null;
         $linkAccessRestrictedPages = (bool)($this->arguments['linkAccessRestrictedPages'] ?? false);
@@ -189,7 +189,12 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
             $cObj->setRequest($request);
             $linkFactory = GeneralUtility::makeInstance(LinkFactory::class);
             $linkResult = $linkFactory->create((string)$this->renderChildren(), $typolinkConfiguration, $cObj);
-            $this->tag->addAttributes($linkResult->getAttributes());
+
+            // Removing TypoLink target here to ensure same behaviour with extbase uri builder in this context.
+            $linkResultAttributes = $linkResult->getAttributes();
+            unset($linkResultAttributes['target']);
+
+            $this->tag->addAttributes($linkResultAttributes);
             $this->tag->setContent($this->renderChildren());
             $this->tag->forceClosingTag(true);
             return $this->tag->render();
@@ -207,7 +212,7 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
         $pageUid = (int)$this->arguments['pageUid'] ?: null;
         $pageType = (int)($this->arguments['pageType'] ?? 0);
         $noCache = (bool)($this->arguments['noCache'] ?? false);
-        $language = $this->arguments['language'] ?? null;
+        $language = isset($this->arguments['language']) ? (string)$this->arguments['language'] : null;
         $section = (string)$this->arguments['section'];
         $format = (string)$this->arguments['format'];
         $linkAccessRestrictedPages = (bool)($this->arguments['linkAccessRestrictedPages'] ?? false);

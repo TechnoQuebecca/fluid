@@ -141,7 +141,7 @@ class PageViewHelper extends AbstractTagBasedViewHelper
         $pageType = isset($this->arguments['pageType']) ? (int)$this->arguments['pageType'] : 0;
         $noCache = isset($this->arguments['noCache']) && (bool)$this->arguments['noCache'];
         $section = isset($this->arguments['section']) ? (string)$this->arguments['section'] : '';
-        $language = $this->arguments['language'] ?? null;
+        $language = isset($this->arguments['language']) ? (string)$this->arguments['language'] : null;
         $linkAccessRestrictedPages = isset($this->arguments['linkAccessRestrictedPages']) && (bool)$this->arguments['linkAccessRestrictedPages'];
         $additionalParams = isset($this->arguments['additionalParams']) ? (array)$this->arguments['additionalParams'] : [];
         $absolute = isset($this->arguments['absolute']) && (bool)$this->arguments['absolute'];
@@ -184,7 +184,12 @@ class PageViewHelper extends AbstractTagBasedViewHelper
             $cObj->setRequest($request);
             $linkFactory = GeneralUtility::makeInstance(LinkFactory::class);
             $linkResult = $linkFactory->create((string)$this->renderChildren(), $typolinkConfiguration, $cObj);
-            $this->tag->addAttributes($linkResult->getAttributes());
+
+            // Removing TypoLink target here to ensure same behaviour with extbase uri builder in this context.
+            $linkResultAttributes = $linkResult->getAttributes();
+            unset($linkResultAttributes['target']);
+
+            $this->tag->addAttributes($linkResultAttributes);
             $this->tag->setContent($this->renderChildren());
             $this->tag->forceClosingTag(true);
             $result = $this->tag->render();
@@ -245,7 +250,7 @@ class PageViewHelper extends AbstractTagBasedViewHelper
         $pageType = isset($this->arguments['pageType']) ? (int)$this->arguments['pageType'] : 0;
         $noCache = isset($this->arguments['noCache']) && (bool)$this->arguments['noCache'];
         $section = isset($this->arguments['section']) ? (string)$this->arguments['section'] : '';
-        $language = $this->arguments['language'] ?? null;
+        $language = isset($this->arguments['language']) ? (string)$this->arguments['language'] : null;
         $linkAccessRestrictedPages = isset($this->arguments['linkAccessRestrictedPages']) && (bool)$this->arguments['linkAccessRestrictedPages'];
         $additionalParams = isset($this->arguments['additionalParams']) ? (array)$this->arguments['additionalParams'] : [];
         $absolute = isset($this->arguments['absolute']) && (bool)$this->arguments['absolute'];
